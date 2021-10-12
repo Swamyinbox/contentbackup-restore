@@ -50,4 +50,3 @@ fi
 cm_pod=$(oc -n $namespace get po | grep -e "^ca.*-cm-0.*" | awk '{ printf $1 }')
 dep_home='/home/ibmuser/cognos/analytics/deployment'
 oc -n $namespace cp ${cm_pod}:${dep_home}/$deployment $deployment -c cm-0
-
